@@ -1,0 +1,53 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color:#090009;
+  height:100%;
+}
+.container{
+  width:220px;
+  perspective:1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.cube{
+  margin: auto;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 2s ease;
+}
+.cube:hover
+{
+  transform: rotateX(180deg) rotateY(720deg);
+}
+.side{
+background: url(../atom.png) no-repeat;
+background-size: 100% 100%;
+  border: 1px solid;
+    background-color:rgba(199,199,199, 0.413);
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+.side.front{
+  transform: translate3d(0,0,100px);
+}
+.side.left{
+  transform: translate3d(-100px,-600px,0px) rotateY(90deg);
+}
+.side.right{
+  transform: translate3d(100px,-400px,0px) rotateY(-90deg);
+}
+.side.back{
+  transform: translate3d(0px,-100px,0px) rotateX(90deg);
+}
+.side.top{
+  transform: translate3d(0px,-800px,-100px) rotateX(0deg);
+}
+.side.bottom{
+  transform: translate3d(0px,-900px,0px) rotateX(90deg);
+}
